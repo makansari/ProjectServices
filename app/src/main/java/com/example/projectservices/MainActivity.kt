@@ -51,23 +51,24 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         }
 
-            var myArrayAdapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,countries)
+          //  var myArrayAdapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,countries)
+        var myArrayAdapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,countries)
 
-       myArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+       myArrayAdapter.setDropDownViewResource(R.layout.item_layout)
 
         spinnerCountry.adapter = myArrayAdapter
 
         spinnerCountry.onItemSelectedListener = this
-
-
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-
-      var data = parent?.getItemAtPosition(position)
-        Toast.makeText(this,"you selected : $data which is at $position",Toast.LENGTH_SHORT).show()
+           var country =  parent?.getItemAtPosition(position).toString()
+        Toast.makeText(this, "you selected $country is at positon $position",Toast.LENGTH_SHORT).show()
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
+        TODO("Not yet implemented")
     }
+
+
 }

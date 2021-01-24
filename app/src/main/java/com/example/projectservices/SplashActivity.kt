@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_splash.*
 
-class SplashActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -48,19 +48,8 @@ class SplashActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         myadappter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
        spinnersplash.adapter = myadappter
 
-        spinnersplash.onItemSelectedListener = this
-
-
 
     }
 
-    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
-        var data = parent?.getItemAtPosition(position).toString()
-        textViewSplash.setText(data)
-    }
-
-    override fun onNothingSelected(parent: AdapterView<*>?) {
-        TODO("Not yet implemented")
-    }
 }
