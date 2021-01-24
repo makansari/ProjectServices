@@ -17,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
                 for(i in 0..5){
                     /*handler.post {
                         textViewSplash.setText( "" + i)
+                        //test
                     }*/
 
                         runOnUiThread {
