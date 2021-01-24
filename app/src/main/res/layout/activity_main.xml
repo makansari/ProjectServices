@@ -10,28 +10,40 @@
         android:id="@+id/buttonStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="137dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="16dp"
         android:text="START"
-        app:layout_constraintEnd_toStartOf="@+id/buttonStop"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/buttonStop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonStop" />
 
     <Button
         android:id="@+id/buttonStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="88dp"
         android:text="STOP"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonStart"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonAlert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="151dp"
+        android:layout_marginTop="214dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="215dp"
         android:text="ALERT"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerCountry"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStop"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerCountry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="230dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
