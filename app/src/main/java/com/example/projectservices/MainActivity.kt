@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             var myBuilder = AlertDialog.Builder(this)
             myBuilder.setTitle("ALERT !!!")
             myBuilder.setMessage("Do you want to continue with Actvity ? ")
+            myBuilder.setCancelable(false)
+            myBuilder.setIcon(R.drawable.images)
 
           myBuilder.setPositiveButton("OK",DialogInterface.OnClickListener { dialog, which ->
 
